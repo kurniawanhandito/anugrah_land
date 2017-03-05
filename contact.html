@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Anugrah Land | Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-case=1, maximum-scale=1">
+        <meta name="application-name" content="Anugrah Land">
+        <meta name="description" content="Anugrah Land is group bla bla bla">
+        <link rel="icon" href="asset/img/icon.gif">
+        <link rel="stylesheet" href="asset/css/style.css">
+        <link rel="stylesheet" href="asset/css/960.css">
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD1M1nYie09vxgSpksHy-MRA8hNEOmv400&sensor=false">
+        </script>
+        <script>
+            var myCenter = new google.maps.LatLng(-7.76783, 110.39126);
+            var marker;
+            function initialize()
+            {
+                var mapProp = {
+                    center: myCenter,
+                    zoom: 14,
+                    disableDefaultUI: true,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMaps"), mapProp);
+                marker = new google.maps.Marker({
+                    position: myCenter,
+                    animation: google.maps.Animation.BOUNCE
+                });
+                marker.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        <!--s:header-->
+        <div class="header">
+            <div class="container_16">
+                <div class="grid_5 suffix_7 navigation">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="profile.html">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="projects.html">PROJECTS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_4 logo">
+                    <img src="asset/img/logo.png" draggable="false" alt=""/>
+                </div>
+            </div>
+        </div>
+        <!--e:header-->
+        <div class="clear"></div>
+        <!--s:content-->
+        <div class="content">
+            <div class="container_16">
+                <div class="grid_4 suffix_2 contact">
+                    <h2>CONTACT</h2>
+                    Yogyakarta
+                    <br/>
+                    Jl. Gejayan CTX No. 25
+                    <br/>
+                    <table>
+                        <tr>
+                            <td>Tlp</td>
+                            <td>:</td>
+                            <td>0274 333 666</td>
+                        </tr>
+                        <tr>
+                            <td>Fax</td>
+                            <td>:</td>
+                            <td>0274 333 555</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>info@anugrahland.com</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="grid_10 form">
+                    <form class="form_contact" method="POST">
+                        <fieldset>
+                            <div class="grid_5" style="margin: 0px !important">
+                                <label id="lblName">Name</label>
+                                <input type="text" id="txtName" required/>
+                                <br/>
+                                <label id="lblEmail">Email</label>
+                                <input type="email" id="txtEmail" required/>
+                                <br/>
+                                <label id="lblSubject">Subject</label>
+                                <input type="text" id="txtSubject" required/>
+                            </div>
+                            <div class="grid_5" style="margin: 0px !important; float: right">
+                                <label id="lblMessage">Message</label>
+                                <textarea id="txtMessage" required></textarea>
+                                <input type="submit" value="Send">
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="map" id="googleMaps"></div>
+                </div>
+            </div>
+        </div>
+        <!--e:content-->
+        <div class="clear"></div>
+        <!--s:footer-->
+        <div class="footer">
+            <div class="container_16">
+                <div class="grid_3 suffix_13 navigation_bottom">
+                    <ul class="menu_bottom">
+                        <li>
+                            <a href="#blog">Blog</a>
+                        </li>
+                        <li>
+                            <a class="selected" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--e:footer-->
+        <div class="clear"></div>
+    </body>
+</html>
